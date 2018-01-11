@@ -21,9 +21,9 @@ Route::get('/users/{name}/{id}', function ($name, $id) {
 });
 */
 
-Route::get('/', 'PagesController@index');
-Route::get('/about', 'PagesController@about');
-Route::get('/services', 'PagesController@services');
+Route::get('/', 'PagesController@index')->name('index');
+Route::get('/about', 'PagesController@about')->name('about');
+Route::get('/services', 'PagesController@services')->name('services');
 
 Route::resource('posts', 'PostsController');
 Auth::routes();
